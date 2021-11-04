@@ -1,0 +1,56 @@
+/*Color*/
+.text-primary, .btn-outline-primary, span{
+	color:#ff0053!important;
+}
+
+.text-dark{
+	color: rgba(255,255,255,.75);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:active{
+	color: #fff!important;
+}
+
+a{
+	color:#ff0053;
+}
+
+a:hover, a:active{
+	color: #721c24;
+}
+
+
+
+/*Background Color*/
+.bg-primary, .badge-primary, .btn-primary, .btn-outline-primary:active, .btn-outline-primary:hover{
+	background-color: #ff0053!important;
+}
+
+.btn-primary:hover, .btn-primary:active{
+	background-color: #721c24!important;
+}
+
+.nosotros>div{
+	background-color: rgba(255,0,83,0.55);
+}
+
+
+/*Border Color*/
+h1, .border-primary, .btn-primary, .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary:hover{
+	border-color:#721c24!important;
+}
+
+.btn-primary:hover, .btn-primary:active{
+	border-color: #721c24!important;
+}
+
+
+/*Focus*/
+.btn-primary:focus, .btn-outline-primary:focus{
+	box-shadow: none;
+}
+
+input:focus, textarea:focus{
+	box-shadow: 0 0rem 0.25rem rgba(255,0,83,0.8)!important;
+	border-color:#721c24!important;
+}
