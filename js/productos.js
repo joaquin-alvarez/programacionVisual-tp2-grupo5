@@ -1,6 +1,6 @@
 //Hardcodeo de API
 let productos = [{
-    femeninos: [
+    'femeninos': [
         {
             'nombre': 'Nombre 01',
             'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
@@ -26,7 +26,7 @@ let productos = [{
             'imagen': 'images/image-03.jpg'
         }
     ],
-    masculinos: [
+    'masculinos': [
         {
             'nombre': 'Nombre 01',
             'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
@@ -52,7 +52,7 @@ let productos = [{
             'imagen': 'images/image-03.jpg'
         }
     ],
-    farmacia: [
+    'farmacia': [
         {
             'nombre': 'Nombre 01',
             'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
@@ -81,16 +81,16 @@ let productos = [{
 
 }];
 
-function productosFemeninos() {
+let productosFemeninos = () => {
     productos[0].femeninos.forEach(function (producto, index) {
         let div = document.createElement('div');
-        div.className = 'col-md-4 col-sm-12 d-flex flex-column justify-content-between';
+        div.className = 'col-md-4 col-sm-12 d-flex flex-column ';
         div.innerHTML = `
             <img src="${producto.imagen}" alt="" class="w-100 rounded img-fluid marcoImagen" >
             <h4><span><i class="fas fa-spa"></i></span> ${producto.nombre}</h4>
             <div>
-                <p class='text-dark textoDescripcion d-inline'>${descripcionCorta(producto.descripcion)}</p>
-                <button class='botonDescripcion botonDescripcionAbierto' type="button" data-bs-toggle="collapse" data-bs-target="#collapseFemenino${index}" aria-expanded="false" aria-controls="collapseFemenino${index}">
+                <p id="textoDescripcion${index}" class='text-dark textoDescripcion d-inline'>${descripcionCorta(producto.descripcion)}</p>
+                <button id="botonDescripcion${index}" class='botonDescripcion botonDescripcionAbrir' type="button" data-bs-toggle="collapse" data-bs-target="#collapseFemenino${index}" aria-expanded="false" aria-controls="collapseFemenino${index}">
                     <span><i class="fas fa-caret-down pe-none"></i></span>
                 </button>
             </div>
@@ -98,7 +98,7 @@ function productosFemeninos() {
             <div class="collapse" id="collapseFemenino${index}">
                 <p>
                     <span class='text-dark'>${producto.descripcion}</span>
-                    <button class='botonDescripcion botonDescripcionCerrar' type="button" data-bs-toggle="collapse" data-bs-target="#collapseFemenino${index}" aria-expanded="false" aria-controls="collapseFemenino${index}">
+                    <button id="botonDescripcionCerrar${index}" class='botonDescripcion botonDescripcionCerrar' type="button" data-bs-toggle="collapse" data-bs-target="#collapseFemenino${index}" aria-expanded="false" aria-controls="collapseFemenino${index}">
                         <span><i class="fas fa-caret-up pe-none"></i></span>
                     </button>
                 </p>
@@ -127,16 +127,16 @@ function productosFemeninos() {
     });
 }
 
-function productosMasculinos() {
+let productosMasculinos = () => {
     productos[0].masculinos.forEach(function (producto, index) {
         let div = document.createElement('div');
-        div.className = 'col-md-4 col-sm-12 d-flex flex-column justify-content-between';
+        div.className = 'col-md-4 col-sm-12 d-flex flex-column ';
         div.innerHTML = `
             <img src="${producto.imagen}" alt="" class="w-100 rounded img-fluid marcoImagen" >
             <h4><span><i class="fas fa-spa"></i></span> ${producto.nombre}</h4>
             <div>
-                <p class='text-dark textoDescripcion d-inline'>${descripcionCorta(producto.descripcion)}</p>
-                <button class='botonDescripcion botonDescripcionAbierto' type="button" data-bs-toggle="collapse" data-bs-target="#collapseMasculino${index}" aria-expanded="false" aria-controls="collapseMasculino${index}">
+                <p id="textoDescripcion${index}" class='text-dark textoDescripcion d-inline'>${descripcionCorta(producto.descripcion)}</p>
+                <button id="botonDescripcion${index}" class='botonDescripcion botonDescripcionAbrir' type="button" data-bs-toggle="collapse" data-bs-target="#collapseMasculino${index}" aria-expanded="false" aria-controls="collapseMasculino${index}">
                     <span><i class="fas fa-caret-down pe-none"></i></span>
                 </button>
             </div>
@@ -144,7 +144,7 @@ function productosMasculinos() {
             <div class="collapse" id="collapseMasculino${index}">
                 <p>
                     <span class='text-dark'>${producto.descripcion}</span>
-                    <button class='botonDescripcion botonDescripcionCerrar' type="button" data-bs-toggle="collapse" data-bs-target="#collapseMasculino${index}" aria-expanded="false" aria-controls="collapseMasculino${index}">
+                    <button id="botonDescripcionCerrar${index}" class='botonDescripcion botonDescripcionCerrar' type="button" data-bs-toggle="collapse" data-bs-target="#collapseMasculino${index}" aria-expanded="false" aria-controls="collapseMasculino${index}">
                         <span><i class="fas fa-caret-up pe-none"></i></span>
                     </button>
                 </p>
@@ -173,16 +173,16 @@ function productosMasculinos() {
     });
 }
 
-function productosFarmacia() {
+let productosFarmacia = () => {
     productos[0].farmacia.forEach(function (producto, index) {
         let div = document.createElement('div');
-        div.className = 'col-md-4 col-sm-12 d-flex flex-column justify-content-between';
+        div.className = 'col-md-4 col-sm-12 d-flex flex-column ';
         div.innerHTML = `
             <img src="${producto.imagen}" alt="" class="w-100 rounded img-fluid marcoImagen" >
             <h4><span><i class="fas fa-spa"></i></span> ${producto.nombre}</h4>
             <div>
-                <p class='text-dark textoDescripcion d-inline'>${descripcionCorta(producto.descripcion)}</p>
-                <button class='botonDescripcion botonDescripcionAbierto' type="button" data-bs-toggle="collapse" data-bs-target="#collapseFarmacia${index}" aria-expanded="false" aria-controls="collapseFarmacia${index}">
+                <p id="textoDescripcion${index}" class='text-dark textoDescripcion d-inline'>${descripcionCorta(producto.descripcion)}</p>
+                <button id="botonDescripcion${index}" class='botonDescripcion botonDescripcionAbrir' type="button" data-bs-toggle="collapse" data-bs-target="#collapseFarmacia${index}" aria-expanded="false" aria-controls="collapseFarmacia${index}">
                     <span><i class="fas fa-caret-down pe-none"></i></span>
                 </button>
             </div>
@@ -190,7 +190,7 @@ function productosFarmacia() {
             <div class="collapse" id="collapseFarmacia${index}">
                 <p>
                     <span class='text-dark'>${producto.descripcion}</span>
-                    <button class='botonDescripcion botonDescripcionCerrar' type="button" data-bs-toggle="collapse" data-bs-target="#collapseFarmacia${index}" aria-expanded="false" aria-controls="collapseFarmacia${index}">
+                    <button id="botonDescripcionCerrar${index}" class='botonDescripcion botonDescripcionCerrar' type="button" data-bs-toggle="collapse" data-bs-target="#collapseFarmacia${index}" aria-expanded="false" aria-controls="collapseFarmacia${index}">
                         <span><i class="fas fa-caret-up pe-none"></i></span>
                     </button>
                 </p>
@@ -219,23 +219,37 @@ function productosFarmacia() {
     });
 }
 
-function descripcionCorta(texto) {
+let descripcionCorta = texto => {
     texto = texto.slice(0, 50);
-    texto += `${texto}...`;
+    texto = `${texto}...`;
 
     return texto;
 }
 
-function toggleBotonDescripcion() {
-    $('.botonDescripcionAbierto').on('click', function () {
-        $('.botonDescripcionAbierto').slideUp();
-        $('.textoDescripcion').removeClass('d-inline');
-        $('.textoDescripcion').slideUp();
+let toggleBotonDescripcion = () => {
+    $('.botonDescripcionAbrir').on('click', function () {
+        let boton = $(this).attr('id');
+        let id = boton.match(/\d+/)[0];
+
+        $(`#${boton}`).slideUp();
+        $(`#textoDescripcion${id}`).removeClass('d-inline');
+        $(`#textoDescripcion${id}`).slideUp();
     });
 
     $('.botonDescripcionCerrar').on('click', function () {
-        $('.botonDescripcionAbierto').slideDown();
-        $('.textoDescripcion').addClass('d-inline');
-        $('.textoDescripcion').slideUp();
+        let boton = $(this).attr('id');
+        let id = boton.match(/\d+/)[0];
+
+        $(`#botonDescripcion${id}`).slideDown();
+        $(`#textoDescripcion${id}`).addClass('d-inline');
+        $(`#textoDescripcion${id}`).slideDown();
     });
+}
+
+
+function vistaProductos(){
+    productosFemeninos();
+    productosMasculinos();
+    productosFarmacia();
+    toggleBotonDescripcion();
 }

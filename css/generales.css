@@ -2,8 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Montserrat');
 
 body{
-	font: 300 18px Montserrat, sans-serif;
+	font-family: Montserrat, sans-serif;
+	font-weight: 300;
+	font-size: 18px;
 	color: #5f6367;
+	overflow-x: hidden;
 }
 
 .nav-item{
@@ -199,6 +202,14 @@ footer p{
 	.container-fluid>iframe{
 		margin-top: 25px;
 	}
+
+	.padLeft{
+		padding-left: 30px;
+	}
+
+	footer .row{
+		padding: 15px;
+	} 
 }
 
 @media (min-width: 992px) {

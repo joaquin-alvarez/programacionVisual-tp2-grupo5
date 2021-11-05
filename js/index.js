@@ -13,10 +13,7 @@ function toggleNavBar() {
 
 function cargaProductos(){
     //Productos
-    productosFemeninos();
-    productosMasculinos();
-    productosFarmacia();
-    toggleBotonDescripcion();
+    vistaProductos();
 
     //Tienda
     nosotros();
