@@ -1,6 +1,6 @@
 $(function(){ 
     toggleNavBar();
-    cargaProductos();
+    cargarVista();
 });
 
 function toggleNavBar() {
@@ -11,11 +11,11 @@ function toggleNavBar() {
     });
 }
 
-function cargaProductos(){
+function cargarVista(){
     //Productos
     vistaProductos();
 
-    //Tienda
+    //Sobre la tienda
     nosotros();
     testimonios();
 

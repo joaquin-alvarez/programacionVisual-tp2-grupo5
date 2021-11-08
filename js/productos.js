@@ -2,6 +2,7 @@
 let productos = [{
     'femeninos': [
         {
+            'id': 'fem01',
             'nombre': 'Nombre 01',
             'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
             'precio': '1.2',
@@ -10,6 +11,7 @@ let productos = [{
             'imagen': 'images/image-01.jpg'
         },
         {
+            'id': 'fem02',
             'nombre': 'Nombre 02',
             'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
             'precio': '1.2',
@@ -18,6 +20,7 @@ let productos = [{
             'imagen': 'images/image-02.jpg'
         },
         {
+            'id': 'fem03',
             'nombre': 'Nombre 03',
             'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
             'precio': '1.2',
@@ -28,6 +31,7 @@ let productos = [{
     ],
     'masculinos': [
         {
+            'id': 'mas01',
             'nombre': 'Nombre 01',
             'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
             'precio': '1.2',
@@ -36,6 +40,7 @@ let productos = [{
             'imagen': 'images/image-01.jpg'
         },
         {
+            'id': 'mas02',
             'nombre': 'Nombre 02',
             'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
             'precio': '1.2',
@@ -44,6 +49,7 @@ let productos = [{
             'imagen': 'images/image-02.jpg'
         },
         {
+            'id': 'mas03',
             'nombre': 'Nombre 03',
             'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
             'precio': '1.2',
@@ -54,6 +60,7 @@ let productos = [{
     ],
     'farmacia': [
         {
+            'id': 'far01',
             'nombre': 'Nombre 01',
             'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
             'precio': '1.2',
@@ -62,6 +69,7 @@ let productos = [{
             'imagen': 'images/image-01.jpg'
         },
         {
+            'id': 'far02',
             'nombre': 'Nombre 02',
             'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
             'precio': '1.2',
@@ -70,6 +78,7 @@ let productos = [{
             'imagen': 'images/image-02.jpg'
         },
         {
+            'id': 'far03',
             'nombre': 'Nombre 03',
             'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
             'precio': '1.2',
@@ -81,144 +90,6 @@ let productos = [{
 
 }];
 
-let productosFemeninos = () => {
-    productos[0].femeninos.forEach(function (producto, index) {
-        let div = document.createElement('div');
-        div.className = 'col-md-4 col-sm-12 d-flex flex-column ';
-        div.innerHTML = `
-            <img src="${producto.imagen}" alt="" class="w-100 rounded img-fluid marcoImagen" >
-            <h4><span><i class="fas fa-spa"></i></span> ${producto.nombre}</h4>
-            <div>
-                <p id="textoDescripcion${index}" class='text-dark textoDescripcion d-inline'>${descripcionCorta(producto.descripcion)}</p>
-                <button id="botonDescripcion${index}" class='botonDescripcion botonDescripcionAbrir' type="button" data-bs-toggle="collapse" data-bs-target="#collapseFemenino${index}" aria-expanded="false" aria-controls="collapseFemenino${index}">
-                    <span><i class="fas fa-caret-down pe-none"></i></span>
-                </button>
-            </div>
-
-            <div class="collapse" id="collapseFemenino${index}">
-                <p>
-                    <span class='text-dark'>${producto.descripcion}</span>
-                    <button id="botonDescripcionCerrar${index}" class='botonDescripcion botonDescripcionCerrar' type="button" data-bs-toggle="collapse" data-bs-target="#collapseFemenino${index}" aria-expanded="false" aria-controls="collapseFemenino${index}">
-                        <span><i class="fas fa-caret-up pe-none"></i></span>
-                    </button>
-                </p>
-            </div>
-            
-            <button class="btn btn-primary botonCompra" data-bs-toggle="modal" data-bs-target="#femenino${index}"><i class="fas fa-cart-plus pe-none"></i> Comprar</button>
-            
-            <div class="modal fade" id="femenino${index}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabelFemenino" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabelFemenino">${producto.nombre}</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="${producto.imagen}" alt="" class="w-100 rounded img-fluid marcoImagen" >
-                            <p>${producto.descripcion}</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-cart-plus pe-none"></i> Comprar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
-        $('#productosFemeninos .row').append(div);
-    });
-}
-
-let productosMasculinos = () => {
-    productos[0].masculinos.forEach(function (producto, index) {
-        let div = document.createElement('div');
-        div.className = 'col-md-4 col-sm-12 d-flex flex-column ';
-        div.innerHTML = `
-            <img src="${producto.imagen}" alt="" class="w-100 rounded img-fluid marcoImagen" >
-            <h4><span><i class="fas fa-spa"></i></span> ${producto.nombre}</h4>
-            <div>
-                <p id="textoDescripcion${index}" class='text-dark textoDescripcion d-inline'>${descripcionCorta(producto.descripcion)}</p>
-                <button id="botonDescripcion${index}" class='botonDescripcion botonDescripcionAbrir' type="button" data-bs-toggle="collapse" data-bs-target="#collapseMasculino${index}" aria-expanded="false" aria-controls="collapseMasculino${index}">
-                    <span><i class="fas fa-caret-down pe-none"></i></span>
-                </button>
-            </div>
-
-            <div class="collapse" id="collapseMasculino${index}">
-                <p>
-                    <span class='text-dark'>${producto.descripcion}</span>
-                    <button id="botonDescripcionCerrar${index}" class='botonDescripcion botonDescripcionCerrar' type="button" data-bs-toggle="collapse" data-bs-target="#collapseMasculino${index}" aria-expanded="false" aria-controls="collapseMasculino${index}">
-                        <span><i class="fas fa-caret-up pe-none"></i></span>
-                    </button>
-                </p>
-            </div>
-            
-            <button class="btn btn-primary botonCompra" data-bs-toggle="modal" data-bs-target="#masculino${index}"><i class="fas fa-cart-plus pe-none"></i> Comprar</button>
-            
-            <div class="modal fade" id="masculino${index}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabelMasculino" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabelMasculino">${producto.nombre}</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="${producto.imagen}" alt="" class="w-100 rounded img-fluid marcoImagen" >
-                            <p>${producto.descripcion}</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-cart-plus pe-none"></i> Comprar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
-        $('#productosMasculinos .row').append(div);
-    });
-}
-
-let productosFarmacia = () => {
-    productos[0].farmacia.forEach(function (producto, index) {
-        let div = document.createElement('div');
-        div.className = 'col-md-4 col-sm-12 d-flex flex-column ';
-        div.innerHTML = `
-            <img src="${producto.imagen}" alt="" class="w-100 rounded img-fluid marcoImagen" >
-            <h4><span><i class="fas fa-spa"></i></span> ${producto.nombre}</h4>
-            <div>
-                <p id="textoDescripcion${index}" class='text-dark textoDescripcion d-inline'>${descripcionCorta(producto.descripcion)}</p>
-                <button id="botonDescripcion${index}" class='botonDescripcion botonDescripcionAbrir' type="button" data-bs-toggle="collapse" data-bs-target="#collapseFarmacia${index}" aria-expanded="false" aria-controls="collapseFarmacia${index}">
-                    <span><i class="fas fa-caret-down pe-none"></i></span>
-                </button>
-            </div>
-
-            <div class="collapse" id="collapseFarmacia${index}">
-                <p>
-                    <span class='text-dark'>${producto.descripcion}</span>
-                    <button id="botonDescripcionCerrar${index}" class='botonDescripcion botonDescripcionCerrar' type="button" data-bs-toggle="collapse" data-bs-target="#collapseFarmacia${index}" aria-expanded="false" aria-controls="collapseFarmacia${index}">
-                        <span><i class="fas fa-caret-up pe-none"></i></span>
-                    </button>
-                </p>
-            </div>
-            
-            <button class="btn btn-primary botonCompra" data-bs-toggle="modal" data-bs-target="#farmacia${index}"><i class="fas fa-cart-plus pe-none"></i> Comprar</button>
-            
-            <div class="modal fade" id="farmacia${index}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabelFarmacia" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabelFarmacia">${producto.nombre}</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="${producto.imagen}" alt="" class="w-100 rounded img-fluid marcoImagen" >
-                            <p>${producto.descripcion}</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-cart-plus pe-none"></i> Comprar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
-        $('#farmacia .row').append(div);
-    });
-}
-
 let descripcionCorta = texto => {
     texto = texto.slice(0, 50);
     texto = `${texto}...`;
@@ -226,10 +97,68 @@ let descripcionCorta = texto => {
     return texto;
 }
 
+let listaProductos = (tipo) => {
+    let arrProductos = [];
+
+    tipo.forEach(function (producto) {
+        arrProductos.push(`
+            <div class='col-md-4 col-sm-12 d-flex flex-column'>
+                <img src="${producto.imagen}" alt="" class="w-100 rounded img-fluid marcoImagen" >
+                <h4><span><i class="fas fa-spa"></i></span> ${producto.nombre}</h4>
+                <div>
+                    <p id="textoDescripcion${producto.id}" class='text-dark textoDescripcion d-inline'>${descripcionCorta(producto.descripcion)}</p>
+                    <button id="botonDescripcion${producto.id}" class='botonDescripcion botonDescripcionAbrir' type="button" data-bs-toggle="collapse" data-bs-target="#collapse${producto.id}" aria-expanded="false" aria-controls="collapse${producto.id}">
+                        <span><i class="fas fa-caret-down pe-none"></i></span>
+                    </button>
+                </div>
+
+                <div class="collapse" id="collapse${producto.id}">
+                    <p>
+                        <span class='text-dark'>${producto.descripcion}</span>
+                        <button id="botonDescripcionCerrar${producto.id}" class='botonDescripcion botonDescripcionCerrar' type="button" data-bs-toggle="collapse" data-bs-target="#collapse${producto.id}" aria-expanded="false" aria-controls="collapse${producto.id}">
+                            <span><i class="fas fa-caret-up pe-none"></i></span>
+                        </button>
+                    </p>
+                </div>
+                
+                <button class="btn btn-primary botonCompra" data-bs-toggle="modal" data-bs-target="#${producto.id}"><i class="fas fa-cart-plus pe-none"></i> Comprar</button>
+                
+                <div class="modal fade" id="${producto.id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel${producto.id}" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel${producto.id}">${producto.nombre}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="${producto.imagen}" alt="" class="w-100 rounded img-fluid marcoImagen" >
+                                <p>${producto.descripcion}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-cart-plus pe-none"></i> Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`);
+    });
+
+    let str = '';
+
+    for (const producto of arrProductos) {
+        str += producto;
+    }
+
+    return str;
+}
+
+
 let toggleBotonDescripcion = () => {
     $('.botonDescripcionAbrir').on('click', function () {
         let boton = $(this).attr('id');
-        let id = boton.match(/\d+/)[0];
+        let nombreId = boton.indexOf(boton.match(/\d+/)[0]);
+        nombreId -= 3;
+        let id = boton.slice(nombreId);
 
         $(`#${boton}`).slideUp();
         $(`#textoDescripcion${id}`).removeClass('d-inline');
@@ -238,7 +167,9 @@ let toggleBotonDescripcion = () => {
 
     $('.botonDescripcionCerrar').on('click', function () {
         let boton = $(this).attr('id');
-        let id = boton.match(/\d+/)[0];
+        let nombreId = boton.indexOf(boton.match(/\d+/)[0]);
+        nombreId -= 3;
+        let id = boton.slice(nombreId);
 
         $(`#botonDescripcion${id}`).slideDown();
         $(`#textoDescripcion${id}`).addClass('d-inline');
@@ -248,8 +179,8 @@ let toggleBotonDescripcion = () => {
 
 
 function vistaProductos(){
-    productosFemeninos();
-    productosMasculinos();
-    productosFarmacia();
+    $('#productosFemeninos .row').append(listaProductos(productos[0].femeninos));
+    $('#productosMasculinos .row').append(listaProductos(productos[0].masculinos));
+    $('#farmacia .row').append(listaProductos(productos[0].farmacia));
     toggleBotonDescripcion();
 }

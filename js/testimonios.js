@@ -11,8 +11,8 @@ let testimoniosUsers = {
             }
         },
         {
-            'nombre': 'Juan',
-            'apellido': 'Pérez',
+            'nombre': 'Ana',
+            'apellido': 'Clara',
             'testimonio': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae deleniti, recusandae porro magni, minus ipsam animi ad officiis eligendi natus aut qui, harum impedit pariatur dignissimos commodi veniam saepe adipisci.',
             'imagen': 'images/clientes/02.jpg',
             'social': {
@@ -26,6 +26,7 @@ let testimoniosUsers = {
 
 let testimoniosUsuarios = () =>{
     let arrTestimonios = [];
+    
     testimoniosUsers.usuarios.forEach(function(testimonio){
         arrTestimonios.push( `
             <div class="row mb-4">
