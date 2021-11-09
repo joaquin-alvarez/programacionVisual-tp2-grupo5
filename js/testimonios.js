@@ -3,7 +3,7 @@ let testimoniosUsers = {
         {
             'nombre': 'Juan',
             'apellido': 'Pérez',
-            'testimonio': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae deleniti, recusandae porro magni, minus ipsam animi ad officiis eligendi natus aut qui, harum impedit pariatur dignissimos commodi veniam saepe adipisci.',
+            'testimonio': 'Utilizo productos cosméticos desde los 15 años y NOMBRE DEL PRODUCTO es, con diferencia, el mejor que he probado jamás. Puedes sentir los principios activos penetrando literalmente en la piel, en lugar de quedarse en la superficie. Ahora tengo la piel más luminosa e hidratada..',
             'imagen': 'images/clientes/01.jpg',
             'social': {
                 'facebook': 'https://es-la.facebook.com/' ,
@@ -13,7 +13,7 @@ let testimoniosUsers = {
         {
             'nombre': 'Ana',
             'apellido': 'Clara',
-            'testimonio': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae deleniti, recusandae porro magni, minus ipsam animi ad officiis eligendi natus aut qui, harum impedit pariatur dignissimos commodi veniam saepe adipisci.',
+            'testimonio': 'Con diferencia el mejor tratamiento que he probado. Desde el momento en que me aplico NOMBRE DEL PRODUCTO, me noto la piel y me veo mucho mejor: cierra los poros, el tono es más uniforme y la hidratación es perfecta. Y lo que me encanta es que el producto viene puro, no diluido. Es un tratamiento específico para mi tipo de piel. Otros productos comparables son entre tres y cuatro veces más caros..',
             'imagen': 'images/clientes/02.jpg',
             'social': {
                 'facebook': 'https://es-la.facebook.com/' ,

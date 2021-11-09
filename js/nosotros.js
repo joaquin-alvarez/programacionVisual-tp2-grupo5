@@ -3,7 +3,7 @@ function nosotros(){
     div.className = 'row';
     div.innerHTML = `
         <h2><span><i class="far fa-gem"></i> Shine</span> - Tienda Online</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa optio nesciunt dolore? Esse, quo modi nihil reiciendis, veniam impedit quia maiores suscipit eius quis tempore expedita, omnis consequatur voluptatem. Assumenda?</p>
+        <p>Devoción por la Salud y el Bienestar. Obsesión por transformar la piel a partir de la conjunción de la Investigación, la Tecnología, y la Naturaleza. Estos son nuestros fundamentos para brindar los mejores productos del mercado!</p>
         <a class="btn btn-primary mt-2" id="botonNosotros" href="#contacto">Escribinos!</a>
     `;
     $('#nosotros').append(div);
