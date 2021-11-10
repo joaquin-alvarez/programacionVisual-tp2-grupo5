@@ -97,6 +97,15 @@ let descripcionCorta = texto => {
     return texto;
 }
 
+let titulo = nombre => {
+    let h2 = document.createElement('h2');
+    h2.innerHTML = `
+        <span><i class="far fa-gem"></i></span><strong> Productos</strong> ${nombre}
+    `;
+
+    return h2;
+}
+
 let listaProductos = (tipo) => {
     let arrProductos = [];
 
@@ -179,8 +188,14 @@ let toggleBotonDescripcion = () => {
 
 
 function vistaProductos(){
+    $(titulo('Femeninos')).prependTo('#productosFemeninos .row');
     $('#productosFemeninos .row').append(listaProductos(productos[0].femeninos));
+
+    $(titulo('Masculinos')).prependTo('#productosMasculinos .row');
     $('#productosMasculinos .row').append(listaProductos(productos[0].masculinos));
+
+    $(titulo('Farmacia')).prependTo('#farmacia .row');
     $('#farmacia .row').append(listaProductos(productos[0].farmacia));
+    
     toggleBotonDescripcion();
 }

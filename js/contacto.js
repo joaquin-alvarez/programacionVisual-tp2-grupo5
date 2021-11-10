@@ -59,6 +59,8 @@ function contacto() {
         <div class="container-fluid">
             ${mapa()}
         </div>
+
+        <p class='text-center mt-5'><i class="far fa-gem"></i><strong>  Shine Beauty</strong></p>
     `;
 
     $('#contacto').prepend(div);

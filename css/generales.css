@@ -154,6 +154,10 @@ section a, section button{
 	font-size: 1.5em;
 }
 
+.contacto{
+	padding: 1em 2em;
+}
+
 .contacto h4{
 	text-transform: capitalize;
 }
@@ -184,7 +188,7 @@ footer{
 	margin: 0;
 	background-color: #333;
 	color: #fff;
-	padding: 20px;
+	/* padding: 20px; */
 }
 
 footer p{
