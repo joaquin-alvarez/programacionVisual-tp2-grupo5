@@ -191,6 +191,11 @@ footer p{
 	margin: 0;
 }
 
+/*Override Bootstrap*/
+.d-md-block {
+    display: block!important;
+}
+
 
 /*Responsive*/
 
