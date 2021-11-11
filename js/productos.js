@@ -8,7 +8,7 @@ let productos = [{
             'precio': '1.2',
             'fechaPublicacion': '04/11/2021',
             'cantidadDisponible': '5',
-            'imagen': 'images/productosMujer/productoMujer1.jpg'
+            'imagen': 'images/productosMujer/productoMujer1.webp'
         },
         {
             'id': 'fem02',
@@ -17,7 +17,7 @@ let productos = [{
             'precio': '1.2',
             'fechaPublicacion': '04/11/2021',
             'cantidadDisponible': '5',
-            'imagen': 'images/productosMujer/productoMujer2.jpg'
+            'imagen': 'images/productosMujer/productoMujer2.webp'
         },
         {
             'id': 'fem03',
@@ -26,7 +26,7 @@ let productos = [{
             'precio': '1.2',
             'fechaPublicacion': '04/11/2021',
             'cantidadDisponible': '5',
-            'imagen': 'images/productosMujer/productoMujer3.jpg'
+            'imagen': 'images/productosMujer/productoMujer3.webp'
         }
     ],
     'masculinos': [
@@ -37,7 +37,7 @@ let productos = [{
             'precio': '1.2',
             'fechaPublicacion': '04/11/2021',
             'cantidadDisponible': '5',
-            'imagen': 'images/productosHombre/productoHombre1.jpg'
+            'imagen': 'images/productosHombre/productoHombre1.webp'
         },
         {
             'id': 'mas02',
@@ -46,7 +46,7 @@ let productos = [{
             'precio': '1.2',
             'fechaPublicacion': '04/11/2021',
             'cantidadDisponible': '5',
-            'imagen': 'images/productosHombre/productoHombre2.jpg'
+            'imagen': 'images/productosHombre/productoHombre2.webp'
         },
         {
             'id': 'mas03',
@@ -55,7 +55,7 @@ let productos = [{
             'precio': '1.2',
             'fechaPublicacion': '04/11/2021',
             'cantidadDisponible': '5',
-            'imagen': 'images/productosHombre/productoHombre3.jpg'
+            'imagen': 'images/productosHombre/productoHombre3.webp'
         }
     ],
     'farmacia': [
@@ -66,7 +66,7 @@ let productos = [{
             'precio': '1.2',
             'fechaPublicacion': '04/11/2021',
             'cantidadDisponible': '5',
-            'imagen': 'images/productosFarmacia/farmacia1.jpg'
+            'imagen': 'images/productosFarmacia/farmacia1.webp'
         },
         {
             'id': 'far02',
@@ -75,7 +75,7 @@ let productos = [{
             'precio': '1.2',
             'fechaPublicacion': '04/11/2021',
             'cantidadDisponible': '5',
-            'imagen': 'images/productosFarmacia/farmacia2.jpg'
+            'imagen': 'images/productosFarmacia/farmacia2.webp'
         },
         {
             'id': 'far03',
@@ -84,7 +84,7 @@ let productos = [{
             'precio': '1.2',
             'fechaPublicacion': '04/11/2021',
             'cantidadDisponible': '5',
-            'imagen': 'images/productosFarmacia/farmacia3.jpg'
+            'imagen': 'images/productosFarmacia/farmacia3.webp'
         }
     ]
 

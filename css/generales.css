@@ -47,6 +47,10 @@ h2{
     border-bottom-width: 1px; 
 }
 
+.carousel-item>img{
+	min-height: 260px;
+}
+
 .marcoImagen{
 	padding: 5px;
 	border:1px solid #eee;
