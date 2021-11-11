@@ -22,7 +22,7 @@ let productos = [{
         {
             'id': 'fem03',
             'nombre': 'Tonico Segin',
-            'descripcion': 'Segin es un blend de aguas hidratantes vivas y calmantes activos con capacidad de equilibrio. Se recomienda su uso para piel seca y sensible',
+            'descripcion': 'Segin es un blend de aguas hidratantes vivas y calmantes activos con capacidad de equilibrio. Se recomienda su uso para piel seca y sensible.',
             'precio': '1745.00',
             'fechaPublicacion': '04/11/2021',
             'cantidadDisponible': '7',
@@ -61,27 +61,27 @@ let productos = [{
     'farmacia': [
         {
             'id': 'far01',
-            'nombre': 'Nombre 01',
-            'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
-            'precio': '1.2',
+            'nombre': 'Aucic Pure',
+            'descripcion': 'Solución oftálmica esteril transparente, lubricante y humectante que actua sustituyendo temporalmente la insuficiencia de lagrimas protegiendo la conjuntiva y el epitelio de la cornea de la irritacion mecánica y la fricción de los parpados.',
+            'precio': '420.00',
             'fechaPublicacion': '04/11/2021',
-            'cantidadDisponible': '5',
+            'cantidadDisponible': '40',
             'imagen': 'images/productosFarmacia/farmacia1.webp'
         },
         {
             'id': 'far02',
-            'nombre': 'Nombre 02',
-            'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
-            'precio': '1.2',
+            'nombre': 'Quelat Complex',
+            'descripcion': 'Contiene Magnesio Quelato 200 mg + Zinc Quelato 7 mg + Selenio Quelato 50 mcg. Estos minerales desempeñan un papel muy importante en el organismo, ya que son necesarios para la elaboración de tejidos, para la síntesis de hormonas y en la mayor parte de las reacciones químicas en las que intervienen enzimas.',
+            'precio': '2135.00',
             'fechaPublicacion': '04/11/2021',
-            'cantidadDisponible': '5',
+            'cantidadDisponible': '20',
             'imagen': 'images/productosFarmacia/farmacia2.webp'
         },
         {
             'id': 'far03',
-            'nombre': 'Nombre 03',
-            'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate exercitationem voluptates dignissimos, dicta ducimus odit veritatis. Esse animi iure, laborum vero eum! A magni eius, aperiam mollitia quos molestias?',
-            'precio': '1.2',
+            'nombre': 'Xtracal Advanced',
+            'descripcion': 'Suplemento a base de aceite de pescado, vitaminas y minerales en capsulas. Contiene complejo vitaminico B que ayuda al óptimo funcionamiento del sistema nervoso; ayuda a mejorar el sistema immunitario y ayuda a disminuir el cansancio, el estrés y la fatiga del día a día.',
+            'precio': '950.00',
             'fechaPublicacion': '04/11/2021',
             'cantidadDisponible': '5',
             'imagen': 'images/productosFarmacia/farmacia3.webp'
