@@ -114,6 +114,7 @@ let listaProductos = (tipo) => {
             <div class='col-md-4 col-sm-12 d-flex flex-column'>
                 <img src="${producto.imagen}" alt="" class="w-100 rounded img-fluid marcoImagen" >
                 <h4><span><i class="fas fa-spa"></i></span> ${producto.nombre}</h4>
+                
                 <div>
                     <p id="textoDescripcion${producto.id}" class='text-dark textoDescripcion d-inline'>${descripcionCorta(producto.descripcion)}</p>
                     <button id="botonDescripcion${producto.id}" class='botonDescripcion botonDescripcionAbrir' type="button" data-bs-toggle="collapse" data-bs-target="#collapse${producto.id}" aria-expanded="false" aria-controls="collapse${producto.id}">
@@ -140,7 +141,7 @@ let listaProductos = (tipo) => {
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <img src="${producto.imagen}" alt="" class="w-100 rounded img-fluid marcoImagen" >
+                                <img src="${producto.imagen}" alt="" class="w-50 d-block rounded img-fluid marcoImagen" >
                                 <p>${producto.descripcion}</p>
                             </div>
                             <div class="modal-footer">
@@ -160,7 +161,6 @@ let listaProductos = (tipo) => {
 
     return str;
 }
-
 
 let toggleBotonDescripcion = () => {
     $('.botonDescripcionAbrir').on('click', function () {

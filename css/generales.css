@@ -51,9 +51,8 @@ h2{
 	min-height: 260px;
 }
 
-.marcoImagen{
-	padding: 5px;
-	border:1px solid #eee;
+.toggleParrafo{
+	display: none;
 }
 
 .container{
@@ -88,6 +87,14 @@ section a, section button{
 
 .secciones ul li{
 	list-style-type: none;
+}
+
+.marcoImagen{
+	padding: 5px;
+	border:1px solid #eee;
+}
+.modal-body>img{
+	margin: auto;
 }
 
 .botonDescripcion{
@@ -236,6 +243,10 @@ footer p{
 
 	.margen{
 		padding-right: 20px;
+	}
+
+	.toggleParrafo{
+		display: block;
 	}
 }
 
