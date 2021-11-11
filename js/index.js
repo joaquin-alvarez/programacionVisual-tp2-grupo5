@@ -1,9 +1,4 @@
-$(function(){ 
-    toggleNavBar();
-    cargarVista();
-});
-
-function toggleNavBar() {
+let toggleNavBar = () => {
     $('.elemNav').each(function(){
         $(this).on('click', function(){
             $(".navbar-collapse").collapse('hide');  
@@ -11,7 +6,7 @@ function toggleNavBar() {
     });
 }
 
-function cargarVista(){
+let cargarVista = () =>{
     //Productos
     vistaProductos();
 
@@ -22,3 +17,8 @@ function cargarVista(){
     //Contacto
     contacto();
 }
+
+$(function(){ 
+    toggleNavBar();
+    cargarVista();
+});
