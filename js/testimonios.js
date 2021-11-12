@@ -3,7 +3,7 @@ let testimoniosUsers = {
         {
             'nombre': 'Juan',
             'apellido': 'Pérez',
-            'testimonio': 'Utilizo productos cosméticos desde los 15 años y NOMBRE DEL PRODUCTO es, con diferencia, el mejor que he probado jamás. Puedes sentir los principios activos penetrando literalmente en la piel, en lugar de quedarse en la superficie. Ahora tengo la piel más luminosa e hidratada..',
+            'testimonio': 'Utilizo productos cosméticos desde los 15 años y Shave Oil PURE es, con diferencia, el mejor que he probado jamás. Puedes sentir los principios activos penetrando literalmente en la piel, en lugar de quedarse en la superficie. Ahora tengo la piel más luminosa e hidratada..',
             'imagen': 'images/clientes/01.webp',
             'social': {
                 'facebook': 'https://es-la.facebook.com/' ,
@@ -13,7 +13,7 @@ let testimoniosUsers = {
         {
             'nombre': 'Ana',
             'apellido': 'Clara',
-            'testimonio': 'Con diferencia el mejor tratamiento que he probado. Desde el momento en que me aplico NOMBRE DEL PRODUCTO, me noto la piel y me veo mucho mejor: cierra los poros, el tono es más uniforme y la hidratación es perfecta. Y lo que me encanta es que el producto viene puro, no diluido. Es un tratamiento específico para mi tipo de piel. Otros productos comparables son entre tres y cuatro veces más caros..',
+            'testimonio': 'Con diferencia el mejor tratamiento que he probado. Desde el momento en que me aplico Tonico Segin, me noto la piel y me veo mucho mejor: cierra los poros, el tono es más uniforme y la hidratación es perfecta. Y lo que me encanta es que el producto viene puro, no diluido. Es un tratamiento específico para mi tipo de piel. Otros productos comparables son entre tres y cuatro veces más caros..',
             'imagen': 'images/clientes/02.webp',
             'social': {
                 'facebook': 'https://es-la.facebook.com/' ,
