@@ -1,33 +1,7 @@
-let testimoniosUsers = {
-    'usuarios': [
-        {
-            'nombre': 'Juan',
-            'apellido': 'Pérez',
-            'testimonio': 'Utilizo productos cosméticos desde los 15 años y Shave Oil PURE es, con diferencia, el mejor que he probado jamás. Puedes sentir los principios activos penetrando literalmente en la piel, en lugar de quedarse en la superficie. Ahora tengo la piel más luminosa e hidratada..',
-            'imagen': 'images/clientes/01.webp',
-            'social': {
-                'facebook': 'https://es-la.facebook.com/' ,
-                'instagram': 'https://www.instagram.com/?hl=es'
-            }
-        },
-        {
-            'nombre': 'Ana',
-            'apellido': 'Clara',
-            'testimonio': 'Con diferencia el mejor tratamiento que he probado. Desde el momento en que me aplico Tonico Segin, me noto la piel y me veo mucho mejor: cierra los poros, el tono es más uniforme y la hidratación es perfecta. Y lo que me encanta es que el producto viene puro, no diluido. Es un tratamiento específico para mi tipo de piel. Otros productos comparables son entre tres y cuatro veces más caros..',
-            'imagen': 'images/clientes/02.webp',
-            'social': {
-                'facebook': 'https://es-la.facebook.com/' ,
-                'instagram': 'https://www.instagram.com/?hl=es'
-            }
-        }
-    ]
-};
-
-
-let testimoniosUsuarios = () =>{
+let testimoniosUsuarios = (data) =>{
     let arrTestimonios = [];
-    
-    testimoniosUsers.usuarios.forEach(function(testimonio){
+
+    data.testimonios.usuarios.forEach(function(testimonio){
         arrTestimonios.push( `
             <div class="row mb-4">
                 <div class="col-md-4 col-sm-12">
@@ -58,15 +32,18 @@ let testimoniosUsuarios = () =>{
     return str;
 }
 
-
 function testimonios() {
-    let div = document.createElement('div');
-    div.className = 'container';
-    div.innerHTML = `
-        <h2><span><i class="far fa-gem"></i></span><strong> Nuestros</strong> clientes</h2>
 
-        ${testimoniosUsuarios()}
-    `;
+    $.getJSON('https://my-json-server.typicode.com/joaquin-alvarez/fakeapi-grupo5/db', function(data){
 
-    $('.testimonios').append(div);
+        let div = document.createElement('div');
+        div.className = 'container';
+        div.innerHTML = `
+            <h2><span><i class="far fa-gem"></i></span><strong> Nuestros</strong> clientes</h2>
+    
+            ${testimoniosUsuarios(data)}
+        `;
+    
+        $('.testimonios').append(div);
+    });    
 }
