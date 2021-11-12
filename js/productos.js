@@ -107,5 +107,9 @@ function vistaProductos(){
         $('#farmacia .row').append(listaProductos(data.farmacia));
     
         toggleBotonDescripcion();
+    })
+    .fail((jqxhr, textStatus, error ) => {
+        let err = `${textStatus}, ${error}`
+        console.log(err);
     });    
 }

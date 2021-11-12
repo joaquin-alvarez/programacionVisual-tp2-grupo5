@@ -45,5 +45,9 @@ function testimonios() {
         `;
     
         $('.testimonios').append(div);
+    })
+    .fail((jqxhr, textStatus, error ) => {
+        let err = `${textStatus}, ${error}`
+        console.log(err);
     });    
 }
