@@ -1,5 +1,5 @@
 //Hardcodeo de API
-let productos = [{
+let productos = {
     'femeninos': [
         {
             'id': 'fem01',
@@ -88,7 +88,7 @@ let productos = [{
         }
     ]
 
-}];
+};
 
 let descripcionCorta = texto => {
     texto = texto.slice(0, 50);
@@ -189,13 +189,13 @@ let toggleBotonDescripcion = () => {
 
 function vistaProductos(){
     $(titulo('Femeninos')).prependTo('#productosFemeninos .row');
-    $('#productosFemeninos .row').append(listaProductos(productos[0].femeninos));
+    $('#productosFemeninos .row').append(listaProductos(productos.femeninos));
 
     $(titulo('Masculinos')).prependTo('#productosMasculinos .row');
-    $('#productosMasculinos .row').append(listaProductos(productos[0].masculinos));
+    $('#productosMasculinos .row').append(listaProductos(productos.masculinos));
 
     $(titulo('Farmacia')).prependTo('#farmacia .row');
-    $('#farmacia .row').append(listaProductos(productos[0].farmacia));
+    $('#farmacia .row').append(listaProductos(productos.farmacia));
     
     toggleBotonDescripcion();
 }
