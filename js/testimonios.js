@@ -1,7 +1,7 @@
-let testimoniosUsuarios = (data) =>{
+let testimoniosUsuarios = (usuarios) =>{
     let arrTestimonios = [];
 
-    data.testimonios.usuarios.forEach(function(testimonio){
+    usuarios.forEach(function(testimonio){
         arrTestimonios.push( `
             <div class="row mb-4">
                 <div class="col-md-4 col-sm-12">
@@ -41,7 +41,7 @@ function testimonios() {
         div.innerHTML = `
             <h2><span><i class="far fa-gem"></i></span><strong> Nuestros</strong> clientes</h2>
     
-            ${testimoniosUsuarios(data)}
+            ${testimoniosUsuarios(data.testimonios.usuarios)}
         `;
     
         $('.testimonios').append(div);

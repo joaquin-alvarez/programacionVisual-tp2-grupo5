@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Shine Beauty</title>
+
 	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<!-- Font Awesome -->
@@ -18,7 +19,10 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<!-- Bootstrap JS -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 	<!-- Módulos -->
+	<script src="js/navBar.js"></script>
+	<script src="js/carousel.js"></script>
 	<script src="js/productos.js"></script>
 	<script src="js/nosotros.js"></script>
 	<script src="js/testimonios.js"></script>
@@ -29,72 +33,11 @@
 <body>
 	<header id="top">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-			<div class="container-fluid">
-				<!-- Logo -->
-				<div class="navbar-brand"><i class="far fa-gem"></i> Shine</div>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			  	</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item active elemNav"><a class="nav-link" href="#top">Home</a></li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Tienda
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item elemNav" href="#productosFemeninos">Productos Femeninos</a></li>
-								<li><a class="dropdown-item elemNav" href="#productosMasculinos">Productos Masculinos</a></li>
-								<li><a class="dropdown-item elemNav" href="#farmacia">Farmacia</a></li>
-							</ul>
-						</li>
-						<li class="nav-item elemNav"><a class="nav-link" href="#nosotros">Nosotros</a></li>
-						<li class="nav-item elemNav"><a class="nav-link" href="#contacto">Contacto</a></li>
-					</ul>	
-				</div>
-			</div>
+			
 		</nav>
 
-		<!-- Carousel -->
 		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-			<div class="carousel-indicators">
-				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-			</div>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="images/slide/carrusel1.webp" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block">
-						<h5><i class="far fa-gem"></i><strong> Shine</strong></h5>
-						<p class="toggleParrafo">Tienda Shine, todo para sentirte bien</p>
-						<a class="btn btn-primary" href="#nosotros">Conocenos!</a>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img src="images/slide/carrusel2.webp" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block">
-						<h5><i class="fas fa-spa"></i><strong> Nuestros</strong> clientes nos recomiendan</h5>
-						<a class="btn btn-primary" href="#testimonios">Escuchalos!</a>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img src="images/slide/carrusel3.webp" class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block">
-						<h5><i class="fas fa-spa"></i><strong> Encontrá</strong> las mejores ofertas</h5>
-						<p class="toggleParrafo">En Shine tenemos todo lo que estás buscando y a un precio increíble!</p>
-						<a class="btn btn-primary" href="#productosFemeninos">Encontralo!</a>
-					</div>
-				</div>
-			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
+
 		</div>
 	</header>
 	<main>

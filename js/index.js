@@ -1,12 +1,18 @@
 let toggleNavBar = () => {
-    $('.elemNav').each(function(){
-        $(this).on('click', function(){
-            $(".navbar-collapse").collapse('hide');  
+    $('nav').on('click', function(){
+        $('.elemNav').each(function(){
+            $(this).on('click', function(){
+                $(".navbar-collapse").collapse('hide');  
+            });
         });
-    });
+    });    
 }
 
 let cargarVista = () =>{
+    //Header
+    navbar();
+    vistaCarousel();
+
     //Productos
     vistaProductos();
 
