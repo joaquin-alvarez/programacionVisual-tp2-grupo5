@@ -3,8 +3,23 @@
 	color:#ff0053!important;
 }
 
+.flex{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: baseline;
+}
+
 .text-dark{
 	color: rgba(255,255,255,.75);
+}
+
+.text-dark-underlined{
+	color: black;
+	text-decoration-line: underline;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 
 .btn-outline-primary:hover, .btn-outline-primary:active{
@@ -18,8 +33,6 @@ a{
 a:hover, a:active{
 	color: #721c24;
 }
-
-
 
 /*Background Color*/
 .bg-primary, .badge-primary, .btn-primary, .btn-outline-primary:active, .btn-outline-primary:hover{

@@ -60,7 +60,7 @@ function contacto() {
             ${mapa()}
         </div>
 
-        <p class='text-center mt-5'><i class="far fa-gem"></i><strong>  Shine Beauty</strong></p>
+        <p class='text-center mt-5'><i class="far fa-gem"></i><strong>  Shine Beauty. Copyright © 2021. All Rights Reserved.</strong></p>
     `;
 
     $('#contacto').prepend(div);

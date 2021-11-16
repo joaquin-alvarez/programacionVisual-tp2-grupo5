@@ -33,6 +33,13 @@ let listaProductos = (tipo) => {
                 <div class="collapse" id="collapse${producto.id}">
                     <p>
                         <span class='text-dark'>${producto.descripcion}</span>
+                        <div class= "flex">
+                        <p class='text-dark-underlined'>Stock Disponible:</p><span class='text-dark'>${producto.cantidadDisponible} unidades</span>
+                        </div>
+                        <div class= "flex">
+                        <p class='text-dark-underlined'>Fecha Publicacion:</p><span class='text-dark'>${producto.fechaPublicacion}</span>
+                        </div>
+                        <p><span>$${producto.precio}</span></p>
                         <button id="botonDescripcionCerrar${producto.id}" class='botonDescripcion botonDescripcionCerrar' type="button" data-bs-toggle="collapse" data-bs-target="#collapse${producto.id}" aria-expanded="false" aria-controls="collapse${producto.id}">
                             <span><i class="fas fa-caret-up pe-none"></i></span>
                         </button>
@@ -51,6 +58,13 @@ let listaProductos = (tipo) => {
                             <div class="modal-body">
                                 <img src="${producto.imagen}" alt="" class="w-50 d-block rounded img-fluid marcoImagen" >
                                 <p>${producto.descripcion}</p>
+                                <div class= "flex">
+                                <p class='text-dark-underlined'>Stock Disponible:</p><span class='text-dark'>${producto.cantidadDisponible} unidades</span>
+                                </div>
+                                <div class= "flex">
+                                <p class='text-dark-underlined'>Fecha Publicacion:</p><span class='text-dark'>${producto.fechaPublicacion}</span>
+                                </div>
+                                <p><span>$${producto.precio}</span></p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-cart-plus pe-none"></i> Comprar</button>
