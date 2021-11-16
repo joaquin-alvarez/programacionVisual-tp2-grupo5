@@ -67,7 +67,13 @@ let listaProductos = (tipo) => {
         str += producto;
     }
 
-    return str;
+    let row = `
+        <div class="row">
+            ${str}
+        </div>
+    `;
+
+    return row;
 }
 
 let toggleBotonDescripcion = () => {
@@ -97,14 +103,14 @@ let toggleBotonDescripcion = () => {
 
 function vistaProductos(){
     $.getJSON('https://my-json-server.typicode.com/joaquin-alvarez/fakeapi-grupo5/db', function(data){
+        $('#productosFemeninos').append(listaProductos(data.femeninos));
         $(titulo('Femeninos')).prependTo('#productosFemeninos .row');
-        $('#productosFemeninos .row').append(listaProductos(data.femeninos));
 
+        $('#productosMasculinos').append(listaProductos(data.masculinos));
         $(titulo('Masculinos')).prependTo('#productosMasculinos .row');
-        $('#productosMasculinos .row').append(listaProductos(data.masculinos));
 
+        $('#farmacia').append(listaProductos(data.farmacia));
         $(titulo('Farmacia')).prependTo('#farmacia .row');
-        $('#farmacia .row').append(listaProductos(data.farmacia));
     
         toggleBotonDescripcion();
     })
