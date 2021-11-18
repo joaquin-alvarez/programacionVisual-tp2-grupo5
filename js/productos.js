@@ -117,13 +117,13 @@ let toggleBotonDescripcion = () => {
 
 function vistaProductos(){
     $.getJSON('https://my-json-server.typicode.com/joaquin-alvarez/fakeapi-grupo5/db', function(data){
-        $('#productosFemeninos').append(listaProductos(data.femeninos));
+        $('#productosFemeninos').append(listaProductos(data.productos.femeninos));
         $(titulo('Femeninos')).prependTo('#productosFemeninos .row');
 
-        $('#productosMasculinos').append(listaProductos(data.masculinos));
+        $('#productosMasculinos').append(listaProductos(data.productos.masculinos));
         $(titulo('Masculinos')).prependTo('#productosMasculinos .row');
 
-        $('#farmacia').append(listaProductos(data.farmacia));
+        $('#farmacia').append(listaProductos(data.productos.farmacia));
         $(titulo('Farmacia')).prependTo('#farmacia .row');
     
         toggleBotonDescripcion();
